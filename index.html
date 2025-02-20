@@ -3,46 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A tecnologia como aliada do meio ambiente, impactos e soluções sustentáveis.">
     <link rel="icon" type="image/jpeg" href="icon.jpeg">
     <link rel="shortcut icon" href="icon.jpeg">
     <title>Meu Site Sustentável</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-image: url("fundo.jpeg"); 
-            background-size: cover; 
-            background-position: center; 
+            background-image: url("fundo.jpeg");
+            background-size: cover;
+            background-position: center;
             background-repeat: repeat-y;
-            height: 100vh; 
-            margin: 0; 
             font-family: Arial, sans-serif;
+            color: #333;
         }
 
         header {
             background-color: #00ff2a;
-            color: rgb(0, 0, 0);
-            padding: 15px 0;
+            color: #000;
+            padding: 20px;
             text-align: center;
-            font-size: 1.5em;
+            font-size: 1.8em;
             font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
 
         nav {
             display: flex;
             justify-content: center;
             background-color: #33a018;
-            padding: 10px 0;
+            padding: 12px;
         }
 
         nav a {
-            color: rgb(0, 0, 0);
+            color: #000;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-weight: bold;
             font-size: 1.2em;
+            transition: 0.3s;
         }
 
         nav a:hover {
             text-decoration: underline;
+            color: #fff;
         }
 
         main {
@@ -51,19 +60,22 @@
             align-items: center;
             text-align: center;
             padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: auto;
         }
 
         section {
             margin-bottom: 30px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
         }
 
         h2 {
             color: #065217;
+            margin-bottom: 10px;
         }
 
         p {
@@ -72,15 +84,39 @@
             text-align: justify;
         }
 
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border-radius: 8px;
+        }
+
         footer {
             background-color: #065217;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
             font-size: 1em;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5em;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+            main {
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -103,44 +139,37 @@
         <section>
             <h2>Impactos Ambientais da Tecnologia</h2>
             <h4>1. Lixo Eletrônico (E-Waste)</h4>
-            <p>Com o rápido avanço tecnológico, milhões de toneladas de lixo eletrônico são geradas anualmente. O descarte inadequado pode contaminar o solo e a água com metais pesados.</p>
-            <img src="imglixo.jpeg" alt="lixo eletrônico" width="300" height="200">
+            <p>O rápido avanço tecnológico gera toneladas de lixo eletrônico anualmente. O descarte inadequado pode contaminar solo e água com metais pesados.</p>
+            <img src="imglixo.jpeg" alt="Lixo Eletrônico">
 
             <h4>2. Consumo de Energia em Data Centers</h4>
-            <p>Data centers são grandes consumidores de energia. Muitos ainda dependem de fontes não renováveis, aumentando as emissões de gases de efeito estufa.</p>
-            <img src="grafico.jpeg" alt="grafico de consumo" width="300" height="200">
-            <p>Os gráficos mostram o aumento contínuo do consumo de energia pelos data centers ao longo dos anos, passando de aproximadamente 200 TWh em 2010 para mais de 450 TWh especificados para 2024. Esse crescimento reflete a crescente demanda por serviços digitais, como armazenamento em nuvem, big data e inteligência artificial, e evidência a necessidade urgente de adoção mais eficiente para prejuízo o impacto ambiental.</p>
-
+            <p>Data centers são grandes consumidores de energia, muitas vezes provenientes de fontes não renováveis.</p>
+            <img src="grafico.jpeg" alt="Gráfico de Consumo">
         </section>
 
         <section>
             <h2>Soluções Tecnológicas Sustentáveis</h2>
             <h4>1. Energia Limpa para Data Centers</h4>
-            <p>Empresas como Google e Microsoft estão investindo em fontes de energia renovável para reduzir o impacto ambiental.</p>
+            <p>Empresas como Google e Microsoft estão investindo em fontes de energia renovável.</p>
             
             <h4>2. Reciclagem de Dispositivos Eletrônicos</h4>
-            <p>Programas de reciclagem ajudam a reutilizar materiais como ouro, prata e cobre, reduzindo a extração de recursos naturais.</p>
-            <img src="img3.jpeg" alt="reciclagem" width="300" height="200">
-
-
-            <h4>3. Economia Circular</h4>
-            <p>A reutilização e o recondicionamento de dispositivos prolongam sua vida útil e diminuem o desperdício.</p>
-            
-            <h4>4. Sensores Inteligentes e IoT</h4>
-            <p>Dispositivos inteligentes monitoram o consumo de recursos e ajudam a reduzir desperdícios.</p>
+            <p>Programas de reciclagem ajudam a reutilizar materiais valiosos e reduzir a extração de recursos naturais.</p>
+            <img src="img3.jpeg" alt="Reciclagem">
         </section>
 
         <section>
             <h2>Adoção de Soluções Sustentáveis em TI (2010-2020)</h2>
-            <p>O gráfico destaca a evolução de três importantes iniciativas sustentáveis no setor de TI: o uso de energias renováveis, a reciclagem de lixo eletrônico e a eficiência energética. Entre 2010 e 2020, observa-se um aumento significativo em todas essas práticas, com destaque para o uso de fontes renováveis, que ultrapassou 80% ao final do período. Essa tendência reflete o esforço crescente das empresas de TI para reduzir sua pegada ambiental, melhorar o gerenciamento de resíduos eletrônicos e adotar tecnologias energeticamente eficientes.</p>
-            <img src="grafico2.jpeg" alt="grafico de soluções" width="400" height="300">
-
+            <p>O gráfico destaca o crescimento de iniciativas sustentáveis no setor de TI, como o uso de energias renováveis e a reciclagem de eletrônicos.</p>
+            <img src="grafico2.jpeg" alt="Gráfico de Soluções Sustentáveis">
         </section>
 
         <section>
             <h2>Conclusão</h2>
-            <p>A tecnologia pode ser tanto uma ameaça quanto uma aliada do meio ambiente. Com o uso responsável e sustentável, é possível minimizar os impactos e garantir um futuro melhor.</p>
-            <p>Site feito por Erick da Silva , Lara Raissa Vieira , Giovanna Victoria , Gizelly Monteiro , Adriel Lima  </p>
+            <p>A tecnologia pode ser tanto uma ameaça quanto uma aliada do meio ambiente. O uso responsável e sustentável minimiza impactos negativos e contribui para um futuro melhor.</p>
+        </section>
+
+        <section>
+            <p><strong>Site desenvolvido por:</strong> Erick da Silva, Lara Raissa Vieira, Giovanna Victoria, Gizelly Monteiro e Adriel Lima</p>
         </section>
     </main>
 
@@ -150,3 +179,4 @@
 
 </body>
 </html>
+
