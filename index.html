@@ -25,6 +25,10 @@
             text-align: center;
             font-size: 1.5em;
             font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         nav {
@@ -32,6 +36,11 @@
             justify-content: center;
             background-color: #33a018;
             padding: 10px 0;
+            margin-top: 50px;
+            position: fixed;
+            width: 100%;
+            top: 60px;
+            z-index: 999;
         }
 
         nav a {
@@ -40,10 +49,11 @@
             margin: 0 15px;
             font-weight: bold;
             font-size: 1.2em;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: white;
         }
 
         main {
@@ -51,7 +61,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 20px;
+            padding: 100px 20px 20px;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -61,6 +71,11 @@
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        section:hover {
+            transform: scale(1.03);
         }
 
         h2 {
@@ -73,6 +88,24 @@
             text-align: justify;
         }
 
+        .btn-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #33a018;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            display: none;
+        }
+
+        .btn-top:hover {
+            background: #065217;
+        }
+
         footer {
             background-color: #065217;
             color: white;
@@ -83,7 +116,6 @@
             width: 100%;
             font-size: 1em;
         }
-        
     </style>
 </head>
 <body>
@@ -93,16 +125,23 @@
     </header>
 
     <nav>
-        <a href="#">Informática e Meio Ambiente</a>
+        <a href="#introduçao">Informática e Meio Ambiente: Impactos e Soluções Sustentáveis</a>
+        <a href="#impactos">Impactos Ambientais</a>
+        <a href="#solucoes">Soluções Sustentáveis</a>
+        <a href="#adocao">Adoção de Soluções Sustentáveis em TI (2010-2020)</a>
+        <a href="#verde">O que é Computação Verde?</a>
+        <a href="#pegada">Pegada de Carbono</a>
+        <a href="#empresas">Empresas Sustentáveis</a>
+        <a href="#ajudar">Como Você Pode Ajudar?</a>
+        <a href="#fim">Conclusão</a>
     </nav>
 
     <main>
-        <section>
+        <section id="introduçao">
             <h2>Informática e Meio Ambiente: Impactos e Soluções Sustentáveis</h2>
             <p>A relação entre a informática e o meio ambiente envolve tanto impactos negativos quanto soluções sustentáveis. Enquanto o lixo eletrônico e o alto consumo de energia são problemas, a tecnologia também possibilita o uso de energia limpa e a reciclagem de dispositivos.</p>
         </section>
-
-        <section>
+        <section id="impactos">
             <h2>Impactos Ambientais da Tecnologia</h2>
             <h4>1. Lixo Eletrônico (E-Waste)</h4>
             <p>Com o rápido avanço tecnológico, milhões de toneladas de lixo eletrônico são geradas anualmente. O descarte inadequado pode contaminar o solo e a água com metais pesados.</p>
@@ -112,11 +151,9 @@
             <p>Data centers são grandes consumidores de energia. Muitos ainda dependem de fontes não renováveis, aumentando as emissões de gases de efeito estufa.</p>
             <img src="grafico.jpeg" alt="grafico de consumo" width="300" height="200">
             <p>Os gráficos mostram o aumento contínuo do consumo de energia pelos data centers ao longo dos anos, passando de aproximadamente 200 TWh em 2010 para mais de 450 TWh especificados para 2024. Esse crescimento reflete a crescente demanda por serviços digitais, como armazenamento em nuvem, big data e inteligência artificial, e evidência a necessidade urgente de adoção mais eficiente para prejuízo o impacto ambiental.</p>
-
         </section>
 
-        <section>
-            <h2>Soluções Tecnológicas Sustentáveis</h2>
+        <section id="solucoes">
             <h4>1. Energia Limpa para Data Centers</h4>
             <p>Empresas como Google e Microsoft estão investindo em fontes de energia renovável para reduzir o impacto ambiental.</p>
             
@@ -130,15 +167,16 @@
             
             <h4>4. Sensores Inteligentes e IoT</h4>
             <p>Dispositivos inteligentes monitoram o consumo de recursos e ajudam a reduzir desperdícios.</p>
+            
         </section>
 
-        <section>
+        <section id="adocao">
             <h2>Adoção de Soluções Sustentáveis em TI (2010-2020)</h2>
             <p>O gráfico destaca a evolução de três importantes iniciativas sustentáveis no setor de TI: o uso de energias renováveis, a reciclagem de lixo eletrônico e a eficiência energética. Entre 2010 e 2020, observa-se um aumento significativo em todas essas práticas, com destaque para o uso de fontes renováveis, que ultrapassou 80% ao final do período. Essa tendência reflete o esforço crescente das empresas de TI para reduzir sua pegada ambiental, melhorar o gerenciamento de resíduos eletrônicos e adotar tecnologias energeticamente eficientes.</p>
             <img src="grafico2.jpeg" alt="grafico de soluções" width="400" height="300">
 
         </section>
-        <section>
+        <section id="verde">
             <h2>O que é Computação Verde?</h2>
             <p>Computação Verde (Green IT) refere-se ao uso sustentável da tecnologia para reduzir impactos ambientais. Algumas práticas incluem:</p>
             <ul>
@@ -146,9 +184,10 @@
                 <li>✅ <strong>Computação em nuvem:</strong> Uso compartilhado de servidores reduz desperdício energético.</li>
                 <li>✅ <strong>Reciclagem de hardware:</strong> Reaproveita metais preciosos e evita o descarte inadequado.</li>
             </ul>
+
         </section>
 
-        <section>
+        <section id="pegada">
             <h2>Pegada de Carbono da Internet</h2>
             <p>A internet pode parecer inofensiva, mas seu impacto ambiental é enorme. Veja alguns dados:</p>
             <ul>
@@ -156,9 +195,10 @@
                 <li>📌 O streaming de vídeos gera <strong>mais de 1% das emissões globais de carbono</strong>.</li>
                 <li>📌 Um e-mail com anexos pode liberar até <strong>50g de CO₂</strong>.</li>
             </ul>
+
         </section>
 
-        <section>
+        <section id="empresas">
             <h2>Empresas que Adotam Práticas Sustentáveis</h2>
             <p>Algumas gigantes da tecnologia já estão tomando medidas para reduzir seu impacto ambiental:</p>
             <ul>
@@ -166,9 +206,9 @@
                 <li>🌱 <strong>Microsoft:</strong> Promete ser <strong>carbono negativa até 2030</strong>.</li>
                 <li>🌱 <strong>Apple:</strong> Produz dispositivos com <strong>materiais reciclados</strong>.</li>
             </ul>
-        </section>
 
-        <section>
+        </section>
+        <section id="ajudar">
             <h2>Como Você Pode Ajudar?</h2>
             <p>Pequenas ações fazem grande diferença! Veja como você pode contribuir:</p>
             <ul>
@@ -177,25 +217,37 @@
                 <li>💡 <strong>Recicle eletrônicos antigos</strong> em pontos de coleta especializados.</li>
                 <li>💡 <strong>Prefira empresas sustentáveis</strong> na hora de comprar produtos tecnológicos.</li>
             </ul>
+
         </section>
+        <section id="fim">
 
-
-        <section>
             <h2>Conclusão</h2>
             <p>A tecnologia pode ser uma grande aliada na construção de um futuro sustentável, desde que seja utilizada de maneira consciente e responsável. A adoção de práticas como o uso de fontes de energia renováveis, o descarte adequado de eletrônicos e a otimização do consumo digital pode reduzir significativamente os impactos ambientais causados ​​pelo setor tecnológico. À medida que empresas e indivíduos incorporem soluções sustentáveis, é possível equilibrar inovação e preservação ambiental. A tecnologia não precisa ser uma ameaça ao meio ambiente – pelo contrário, pode ser uma chave para protegê-lo e garantir um planeta mais</p>
+
         </section>
-          <section>
+        <section>
             <p>Site feito por Erick da Silva , Lara Raissa Vieira , Giovanna Victoria , Gizelly Monteiro , Adriel Lima  </p>
         </section>
     </main>
+
+    <button class="btn-top" onclick="topFunction()">⬆ Topo</button>
 
     <footer>
         © 2025 - Desenvolvimento Sustentável e Tecnologia
     </footer>
 
+    <script>
+        let btnTop = document.querySelector(".btn-top");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btnTop.style.display = "block";
+            } else {
+                btnTop.style.display = "none";
+            }
+        };
+        function topFunction() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
 </body>
 </html>
-
-</body>
-</html>
-
